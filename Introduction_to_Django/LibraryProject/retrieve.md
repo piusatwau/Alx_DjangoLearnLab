@@ -1,0 +1,1 @@
+all_books = Book.objects.all()
