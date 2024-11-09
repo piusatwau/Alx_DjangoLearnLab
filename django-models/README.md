@@ -1,1 +1,1 @@
-My first Django Project
+Project Description
