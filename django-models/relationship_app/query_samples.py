@@ -22,6 +22,8 @@ print(f"Librarian of {library_name}: {librarian.name}")
 
 #SOLUTION 2
 
+from relationship_app.models import Author, Book, Library, Librarian
+
 # Query all books by a specific author
 author_name = 'Specific Author Name'  # Replace with the actual author's name
 try:
@@ -46,9 +48,10 @@ except Library.DoesNotExist:
 
 # Retrieve the librarian for a specific library
 try:
-    librarian = library.librarian  # Access the related librarian
+    librarian = Librarian.objects.get(library=library)
     print(f"Librarian of {library_name}: {librarian.name}")
 except Library.DoesNotExist:
     print(f"Library with name '{library_name}' does not exist.")
 except Librarian.DoesNotExist:
     print(f"Librarian for '{library_name}' does not exist.")
+
