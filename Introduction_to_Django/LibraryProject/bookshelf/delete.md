@@ -1,3 +1,3 @@
-# deleting records
+from bookshelf import Book
 
-Book.objects.filter(title="1984").delete()
+book.title("Nineteen Eighty-Four").delete()
