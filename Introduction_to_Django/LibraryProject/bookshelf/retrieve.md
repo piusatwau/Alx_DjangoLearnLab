@@ -1,1 +1,1 @@
-all_books = Book.objects.all()
+Book.object.get(title="1984")
