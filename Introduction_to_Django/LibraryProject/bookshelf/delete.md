@@ -1,3 +1,3 @@
-from bookshelf import Book
+from bookshelf.models import Book
 
-book.title("Nineteen Eighty-Four").delete()
+book.delete()
