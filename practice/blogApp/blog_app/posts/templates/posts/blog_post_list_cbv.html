@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <ul>
+        {% for post in blog_posts_cbv %}
+        <li>{{ post.title }} - {{ post.pub_date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
