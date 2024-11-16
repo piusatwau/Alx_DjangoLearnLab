@@ -130,3 +130,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Authentication
 AUTH_USER_MODEL = 'bookshelf.CustomUser'
+
+# SECURITY
+
+# Redirect all HTTP requests to HTTPS
+SECURE_SSL_REDIRECT = True
+
+# Enable HTTP Strict Transport Security (HSTS)
+SECURE_HSTS_SECONDS = 31536000  # One year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Apply to all subdomains
+SECURE_HSTS_PRELOAD = True  # Allow preloading
+
+# Ensure browsers follow the declared content type
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# Enable the browser's XSS protection
+SECURE_BROWSER_XSS_FILTER = True
+
+
