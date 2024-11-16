@@ -153,5 +153,9 @@ SESSION_COOKIE_SECURE = True
 # Secure CSRF cookies
 CSRF_COOKIE_SECURE = True
 
+# Inform Django that the proxy handles SSL and sets the original request protocol
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
 
 
