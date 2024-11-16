@@ -147,4 +147,11 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 # Enable the browser's XSS protection
 SECURE_BROWSER_XSS_FILTER = True
 
+# Secure session cookies
+SESSION_COOKIE_SECURE = True
+
+# Secure CSRF cookies
+CSRF_COOKIE_SECURE = True
+
+
 
