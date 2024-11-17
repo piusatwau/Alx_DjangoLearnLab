@@ -104,6 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# MY CODE
+#Custom user model
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -128,6 +131,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # MY CODE
+
 # Authentification Settings
 
 LOGIN_REDIRECT_URL = "home" 
@@ -135,3 +139,10 @@ LOGOUT_REDIRECT_URL = "home"
 
 # Outputting emails to console instead of default SMTP
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" 
+
+# Custom backend
+
+AUTHENTICATION_BACKENDS = [
+    'path.to.EmailBackend',  # Your custom backend
+    'django.contrib.auth.backends.ModelBackend',  # Keep the default backend as a fallback
+]
